@@ -1,0 +1,27 @@
+﻿
+<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light">
+    <div class="container" style="font-size: 1.1rem">
+
+        @Html.ActionLink("Vidly", "Index", "Home", new { area = "" }, new { @style = "font-size:1.5rem", @class = "navbar-brand" })
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Customers", "Index", "Customer", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Movies", "Index", "Movies", new { area = "" }, new { @class = "nav-link" })
+                </li>
+            </ul>
+            <ul class="nav navbar-nav my-2 my-lg-0">
+                @*<li>@Html.ActionLink("Register", "", "", new { area = "" }, new { @class = "nav-link" })</li>*@
+                @*<li>@Html.ActionLink("Login", "", "", new { area = "" }, new { @class = "nav-link" })</li>*@
+                @Html.Partial("_LoginPartial");
+            </ul>
+        </div>
+    </div>
+</nav>
